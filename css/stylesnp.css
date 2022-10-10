@@ -1,0 +1,221 @@
+/*import fonts*/
+@import url(./fonts.css);
+
+*{
+    margin:0;
+    padding:0; 
+}
+
+.skills{
+    position:absolute;
+    border: 1px solid black;
+    top:10%;
+    left:28%;
+    text-align: center;
+}
+
+.skills .skill{
+    font-family: Benguiat;
+    font-size: 72px; 
+    color:black;
+    position:absolute;
+    text-align: center;
+    animation: glitch 1s linear infinite;   
+}
+
+.projects{
+    position:absolute;
+    top:10%;
+    left:65%;
+    text-align: center;
+    height:100%;
+}
+
+.projects .project{
+    font-family: Benguiat;
+    font-size: 72px; 
+    color:black;
+    position:absolute;
+    left: 30%;
+    margin-bottom:50px;
+    animation: glitch 1s linear infinite;   
+}
+
+.bars{
+    display: block;
+    height:auto;
+   position: relative;
+   margin-top: 210px;
+   margin-left:350px;
+   width:30%
+}
+
+.bars h4{
+    font-family: RodinL;
+}
+
+.bars .progress{
+    max-width: 100%;
+    margin-bottom:10%;
+}
+
+.bars .progress .progress-bar-html{
+    animation: typingh 2s;
+}
+
+.bars .progress .progress-bar-css{
+    animation: typingc 2s;
+}
+.bars .progress .progress-bar-js{
+    animation: typingj 2s;
+}
+.bars .progress .progress-bar-2d{
+    animation: typing2 2s;
+}
+
+.card{
+    position:absolute;
+    top:22%;
+    right:17%;
+    max-width: 20%;
+    max-height: 50%;
+}
+
+.card .card-body .card-title{
+    font-family: RodinDB;
+}
+
+.card .card-body .card-title .card-text, .btn{
+    font-family: RodinL;
+}
+
+.sidebar{
+    position: fixed;
+    background-color: black;
+    top:0;
+    left: 0;
+    height: 100%;
+    width: 100px;
+    padding:6px;
+    
+}
+
+.sidebar > .logo{
+    color: white;
+    font-family: Benguiat;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.sidebar a {
+    display: block;
+    color: black;
+    padding: 16px;
+    margin-top:120px;
+  }
+
+  .sidebar > a > img {
+    height:50px;
+    width:50px;
+    align-items: center;
+    color:black;
+   position:relative;     
+    border-radius: 5px;
+    background-color:black;  
+}
+
+.sidebar > a.active > img {
+    background-color:white;
+}
+
+
+.sidebar a:hover img.baricon1 {
+  filter:invert(1);  
+}
+
+.sidebar a:hover img.baricon2 {
+  filter:invert(1);   
+}
+
+/*h1 glitch effect*/ 
+@keyframes glitch{
+    2%,64%{
+      transform: translate(2px,0) skew(0deg);
+    }
+    4%,60%{
+      transform: translate(-2px,0) skew(0deg);
+    }
+    62%{
+      transform: translate(0,0) skew(5deg); 
+    }
+  }
+  
+  .skill:before,
+  .skill:after{
+    content: "Skills";
+    position: absolute;
+    left: 0px;
+  }
+
+  .project:before,
+  .project:after{
+    content: "Projects";
+    position: absolute;
+    left: 0px;
+  }
+  
+  .skill:before , .project:before{
+    animation: glitchTop 1.5s linear infinite;
+    clip-path: polygon(0 0, 100% 0, 100% 33%, 0 33%);
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 33%, 0 33%);
+  }
+  
+  @keyframes glitchTop{
+    2%,64%{
+      transform: translate(2px,-2px);
+    }
+    4%,60%{
+      transform: translate(-2px,2px);
+    }
+    62%{
+      transform: translate(13px,-1px) skew(-13deg); 
+    }
+  }
+  
+  .skill:after, .project:after{
+    animation: glitchBotom 1.5s linear infinite;
+    clip-path: polygon(0 67%, 100% 67%, 100% 100%, 0 100%);
+    -webkit-clip-path: polygon(0 67%, 100% 67%, 100% 100%, 0 100%);
+  }
+  
+  @keyframes glitchBotom{
+    2%,64%{
+      transform: translate(-2px,0);
+    }
+    4%,60%{
+      transform: translate(-2px,0);
+    }
+    62%{
+      transform: translate(-22px,5px) skew(2deg); 
+    }
+  }
+
+  @keyframes typingh {
+    from { width: 0 }
+    to { width: 75% }
+  }
+
+  @keyframes typingc {
+    from { width: 0 }
+    to { width: 60% }
+  }
+
+  @keyframes typingj {
+    from { width: 0 }
+    to { width:  45% }
+  }
+
+  @keyframes typing2 {
+    from { width: 0 }
+    to { width: 10% }
+  }

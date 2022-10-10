@@ -1,0 +1,170 @@
+/*import fonts*/
+@import url(./fonts.css);
+
+*{
+    margin:0;
+    padding:0; 
+}
+
+.hello {
+    font-size:100px;
+    font-family: Benguiat;
+    position:absolute;
+    top:40%;
+    left: 20%;
+    text-decoration-line: underline;
+    animation: glitch 1s linear infinite;
+}
+.subtitle{
+    overflow: hidden; 
+    font-size:50px;
+    font-family: RodinM;
+    position:absolute;
+    top:55%;
+    left: 38%; 
+    animation: typing 2s;
+}
+
+.toabout{
+    overflow: hidden; 
+    font-size:35px;
+    font-family: RodinL;
+    position:absolute;
+    top:70%;
+    left: 40%; 
+    text-decoration: none;
+    color:black;
+    display:inline-block;
+    animation: typing 2s;
+}
+
+.sidebar{
+    position: fixed;
+    background-color: black;
+    top:0;
+    left: 0;
+    height: 100%;
+    width: 100px;
+    padding:6px;
+    
+}
+
+.sidebar > .logo{
+    color: white;
+    font-family: Benguiat;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.sidebar a {
+    display: block;
+    color: black;
+    padding: 16px;
+    margin-top:120px;
+  }
+
+.sidebar > a > img {
+    height:50px;
+    width:50px;
+    align-items: center;
+    color:black;
+   position:relative;     
+    border-radius: 5px;
+    background-color:black;  
+}
+
+.sidebar > a.active > img {
+    background-color:white;
+}
+
+
+.sidebar a:hover img.baricon2 {
+    filter:invert(1); 
+}
+
+.sidebar a:hover img.baricon3 {
+  filter:invert(1);   
+}
+
+
+ /*h1 glitch effect*/ 
+  @keyframes glitch{
+    2%,64%{
+      transform: translate(2px,0) skew(0deg);
+    }
+    4%,60%{
+      transform: translate(-2px,0) skew(0deg);
+    }
+    62%{
+      transform: translate(0,0) skew(5deg); 
+    }
+  }
+  
+  .hello:before,
+  .hello:after{
+    content: "Hello, my name is EthaN";
+    position: absolute;
+    left: 0px;
+  }
+  
+  .hello:before{
+    animation: glitchTop 1.5s linear infinite;
+    clip-path: polygon(0 0, 100% 0, 100% 33%, 0 33%);
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 33%, 0 33%);
+  }
+  
+  @keyframes glitchTop{
+    2%,64%{
+      transform: translate(2px,-2px);
+    }
+    4%,60%{
+      transform: translate(-2px,2px);
+    }
+    62%{
+      transform: translate(13px,-1px) skew(-13deg); 
+    }
+  }
+  
+  .hello:after{
+    animation: glitchBotom 1.5s linear infinite;
+    clip-path: polygon(0 67%, 100% 67%, 100% 100%, 0 100%);
+    -webkit-clip-path: polygon(0 67%, 100% 67%, 100% 100%, 0 100%);
+  }
+  
+  @keyframes glitchBotom{
+    2%,64%{
+      transform: translate(-2px,0);
+    }
+    4%,60%{
+      transform: translate(-2px,0);
+    }
+    62%{
+      transform: translate(-22px,5px) skew(2deg); 
+    }
+  }
+
+  .toabout:after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: black;
+    transform-origin: bottom center;
+    transition: transform 0.25s ease-in;
+  }
+  
+  .toabout:hover:after {
+    transform: scaleX(1);
+    transform-origin: bottom center;
+  }
+
+   /* The typing effect */
+   @keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+  }
+
+  

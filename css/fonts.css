@@ -1,0 +1,32 @@
+/* @font-face */ 
+
+@font-face {
+    font-family: Benguiat;
+    src: url('//fonts/Benguiat/ITC\ Benguiat\ Book.ttf');
+}
+
+@font-face {
+    font-family: RodinL;
+    src: url('/fonts/Rodin/FOTRodin Pro L.otf');
+}
+
+@font-face {
+    font-family: RodinM;
+    src: url('/fonts/Rodin/FOTRodin Pro M.otf');
+}
+
+@font-face {
+    font-family: RodinDB;
+    src: url('/fonts/Rodin/FOTRodin Pro DB.otf');
+}
+
+@font-face {
+    font-family: RodinEB;
+    src: url('/fonts/Rodin/FOTRodin Pro UB.otf.otf');
+}
+
+@font-face {
+    font-family: RodinUB;
+    src: url('/fonts/Rodin/FOTRodin Pro EB.otf.otf');
+}
+

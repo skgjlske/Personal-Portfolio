@@ -1,0 +1,226 @@
+/*import fonts*/
+@import url(./fonts.css);
+
+*{
+    margin:0;
+    padding:0; 
+}
+
+.content{
+    overflow:auto;
+}
+
+.aboutext{
+    position:absolute;
+    top:0%;
+    left:5%;
+    width: 48%;
+    height:80%;
+    display:flex;
+    margin:auto;
+    padding:auto;
+    overflow:hidden;
+}
+
+.about{
+    font-family: Benguiat;
+    font-size: 72px;
+    position: absolute;
+    left:10%;
+    top:10%;
+    animation: glitch 1s linear infinite;
+}
+
+.me{
+    max-height: 40%;
+    max-width: 40%;
+    position: relative;
+    top:20%;
+    left: 55%;
+    border: 5px solid black;
+    animation:typing 2s;
+}
+
+.socials{
+    font-family: RodinDB;
+    font-size: 20px;
+    position: absolute;
+    left:55%;
+    top:75%;
+    animation:typing 2s;
+}
+
+p{
+    font-family: RodinL;
+    font-size: 32px;
+    position: absolute;
+    left:10%;
+    top:20%;
+    text-align: justify;
+    float:left;
+    max-width: 100%;
+}
+
+.socialicons {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 50px;
+    padding: 30px;
+    position:absolute;
+    top:78%;
+    left: 52%;
+    right:2%;
+    z-index:1;
+}
+
+.socialicons .icon a img{
+    max-height:70px;
+    max-width:70px;
+    margin: 0 50px 0 50px;
+    animation: typing 2s; 
+    background-color:white; 
+}
+
+.socialicons .icon a img.fb:hover{
+  filter:invert(1); 
+}
+
+.socialicons .icon a img.ig:hover{
+  filter:invert(1); 
+}
+
+.socialicons .icon a img.twt:hover{
+  filter:invert(1);   
+}
+
+.socialicons .icon a img.gh:hover{
+  filter:invert(1); 
+}
+
+
+.sidebar{
+    position: fixed;
+    background-color: black;
+    top:0;
+    left: 0;
+    height: 100%;
+    width: 100px;
+    padding:6px;
+    
+}
+
+.sidebar > .logo{
+    color: white;
+    font-family: Benguiat;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.sidebar a {
+    display: block;
+    color: black;
+    padding: 16px;
+    margin-top:120px;
+  }
+
+  .sidebar > a > img {
+    height:50px;
+    width:50px;
+    align-items: center;
+    color:black;
+   position:relative;     
+    border-radius: 5px;
+    background-color:black;  
+}
+
+.sidebar > a.active > img {
+    background-color:white;
+}
+
+
+.sidebar a:hover img.baricon1 {
+  filter:invert(1);   
+}
+
+.sidebar a:hover img.baricon3 {
+  filter:invert(1);   
+}
+
+/*h1 glitch effect*/ 
+@keyframes glitch{
+    2%,64%{
+      transform: translate(2px,0) skew(0deg);
+    }
+    4%,60%{
+      transform: translate(-2px,0) skew(0deg);
+    }
+    62%{
+      transform: translate(0,0) skew(5deg); 
+    }
+  }
+  
+  .about:before,
+  .about:after{
+    content: "AbouT Me";
+    position: absolute;
+    left: 0px;
+  }
+  
+  .about:before{
+    animation: glitchTop 1.5s linear infinite;
+    clip-path: polygon(0 0, 100% 0, 100% 33%, 0 33%);
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 33%, 0 33%);
+  }
+  
+  @keyframes glitchTop{
+    2%,64%{
+      transform: translate(2px,-2px);
+    }
+    4%,60%{
+      transform: translate(-2px,2px);
+    }
+    62%{
+      transform: translate(13px,-1px) skew(-13deg); 
+    }
+  }
+  
+  .about:after{
+    animation: glitchBotom 1.5s linear infinite;
+    clip-path: polygon(0 67%, 100% 67%, 100% 100%, 0 100%);
+    -webkit-clip-path: polygon(0 67%, 100% 67%, 100% 100%, 0 100%);
+  }
+  
+  @keyframes glitchBotom{
+    2%,64%{
+      transform: translate(-2px,0);
+    }
+    4%,60%{
+      transform: translate(-2px,0);
+    }
+    62%{
+      transform: translate(-22px,5px) skew(2deg); 
+    }
+  }
+
+  .aboutext p {
+    overflow: hidden; 
+    margin: 0 auto; 
+    animation: 
+      typing 2s;
+  }
+  
+  /* The typing effect */
+  @keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+  }
+
+  
+.owl-carousel:not(.gameicon){
+    left:12%;
+    top:5px;
+    overflow: hidden;
+    z-index: 0;
+}
+
+
